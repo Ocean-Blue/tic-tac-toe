@@ -2,7 +2,6 @@
 
 import unittest
 from unittest.mock import patch
-
 import tictactoe as game
 
 
@@ -34,7 +33,9 @@ class GameLogicTests(unittest.TestCase):
 
         self.assertEqual(game.gameBoard[1][1], "x")
         self.assertEqual(game.gameBoardValues[(1, 1)], game.PLAYER_POINT)
-        self.assertEqual([line.count for line in game.gameCounts], [0, -5, 0, 0, -5, 0, -5, -5])
+        self.assertEqual(
+            [line.count for line in game.gameCounts], [0, -5, 0, 0, -5, 0, -5, -5]
+        )
 
     def test_find_move_takes_center_when_available(self):
         self.assertEqual(game.findMove(), (1, 1))
