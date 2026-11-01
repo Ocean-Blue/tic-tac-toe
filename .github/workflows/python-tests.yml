@@ -1,4 +1,4 @@
-name: Python tests
+name: Python CI
 
 on:
   push:
@@ -21,8 +21,15 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install pytest
-        run: python -m pip install pytest
+      - name: Install dependencies
+        run: |
+          python -m pip install pytest ruff
+
+      - name: Lint Python code
+        run: ruff check .
+
+      - name: Check code formatting
+        run: ruff format --check .
 
       - name: Run tests
         run: python -m pytest
