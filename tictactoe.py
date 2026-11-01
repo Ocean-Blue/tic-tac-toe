@@ -1,9 +1,9 @@
 #Magician
 import random
 import time
+from collections import Counter
 from dataclasses import dataclass, field
 from typing import Literal
-from collections import Counter
 
 """
 Console-format tic tac toe game in Python
@@ -251,7 +251,7 @@ def main():
 	global playerPiece
 	global gamePiece
 
-	playerDraw = input("Welcome to tic tac toe game. Let's start by deciding who plays first. Please draw a random number by pressing any key. The person who draws bigger number would start first with the token 'x'.")
+	input("Welcome to tic tac toe game. Let's start by deciding who plays first. Please draw a random number by pressing any key. The person who draws bigger number would start first with the token 'x'.")
 	playerDrawNum = getrandomnumber()
 	print("You have drawn", playerDrawNum)
 	time.sleep(0.5)
