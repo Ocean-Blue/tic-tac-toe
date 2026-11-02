@@ -103,7 +103,7 @@ def getSlotValue(idx1, idx2):
 
 
 def getrandomnumber(min=1, max=100):
-    return random.randint(min, max)
+    return random.randint(min, max)  # nosec B311 - game logic; no security requirement
 
 
 # Print the game board in the console
