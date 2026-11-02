@@ -1,3 +1,12 @@
+# Python cache files
 __pycache__/
 *.py[cod]
+
+# Python test cache files
 .pytest_cache/
+
+# ruff cache files
+.ruff_cache/
+
+# Python virtual environment
+.venv/
